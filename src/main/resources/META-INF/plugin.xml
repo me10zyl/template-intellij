@@ -1,0 +1,53 @@
+<idea-plugin>
+    <id>com.yilnz.intellij.mybatis_generator</id>
+    <name>Mybatis Generator</name>
+    <version>1.0</version>
+    <vendor email="me10zyl@qq.com" url="https://github.com/me10zyl/intellij-mybatis-generator">me10zyl</vendor>
+
+    <description><![CDATA[
+      Generator mybatis mapper via database, select sql, insert sql and etc.<br/>
+      <em>Features:</em><br/>
+      <ul>
+        <li>Fields - generate entity class</li>
+        <li>Fields - class fields auto complete</li>
+        <li>Fields - mybatis mapper generate</li>
+        <li>SQL - insert sql generate</li>
+        <li>SQL - select sql with query generate</li>
+        <li>File - mapper xml generate</li>
+        <li>File - mapper java code generate</li>
+        <li>Generator - controller - service - mapper , method generate</li>
+      </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      v1.0.0 initialize <br/>
+    ]]>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <toolWindow id="Mybatis Generator"
+                    icon="/mybatis.png"
+                    anchor="right"
+                    factoryClass="com.ylinz.intellij.mybatis_generator.MainUI"/>
+    </extensions>
+
+
+    <actions>
+        <!-- Add your actions here -->
+
+        <action id="com.ylinz.intellij.mybatis_generator.CodeGeneratorAction"
+                class="com.ylinz.intellij.mybatis_generator.CodeGeneratorAction"
+                text="[MYGEN]Generate Service/DAO/xml Code...">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>

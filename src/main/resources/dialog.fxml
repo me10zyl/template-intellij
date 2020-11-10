@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="406.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="52.0" layoutY="43.0" text="Service" />
+      <Label layoutX="33.0" layoutY="81.0" text="Mapper/DAO" />
+      <Label layoutX="38.0" layoutY="124.0" text="Mapper.xml" />
+      <ChoiceBox fx:id="choiceMapper" layoutX="129.0" layoutY="77.0" prefWidth="150.0" />
+      <Label fx:id="labelMapper" layoutX="129.0" layoutY="124.0" text="Label" />
+      <Label fx:id="labelService" layoutX="129.0" layoutY="43.0" text="Label" />
+      <TextField layoutX="144.0" layoutY="172.0" promptText="要生成的方法名称" />
+      <Label layoutX="33.0" layoutY="176.0" text="要生成的方法名称" />
+   </children>
+</Pane>
